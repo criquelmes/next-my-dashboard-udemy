@@ -1,0 +1,2 @@
+export type { PokemonsResponse } from "./interfaces/pokemons-response.interface";
+export type { SimplePokemon } from "./interfaces/simple-pokemon.interface";
