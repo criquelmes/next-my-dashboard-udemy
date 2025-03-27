@@ -1,5 +1,5 @@
 import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons";
-import Image from "next/image";
+import { notFound } from "next/navigation";
 
 const getPokemons = async ({
   limit = 20,
@@ -14,6 +14,9 @@ const getPokemons = async ({
     id: pokemon.url.split("/")[6],
     name: pokemon.name,
   }));
+
+  // throw notFound();
+  // throw new Error("Error en la carga de pokemons");
 
   return pokemons;
 };
