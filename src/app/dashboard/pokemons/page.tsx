@@ -1,5 +1,5 @@
-import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons";
-import { notFound } from "next/navigation";
+import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/pokemons";
+// import { notFound } from "next/navigation";
 
 const getPokemons = async ({
   limit = 20,
