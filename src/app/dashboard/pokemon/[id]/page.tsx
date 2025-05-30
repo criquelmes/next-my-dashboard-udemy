@@ -21,6 +21,9 @@ export async function generateMetadata({
 const getPokemon = async (id: string): Promise<Pokemon> => {
   const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`, {
     cache: "force-cache",
+    // next: {
+    //   revalidate: 60, // Revalidar cada 60 segundos
+    // },
   }).then((res) => res.json());
 
   console.log("se cargo: ", pokemon.name);
